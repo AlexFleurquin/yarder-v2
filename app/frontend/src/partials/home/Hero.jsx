@@ -15,8 +15,8 @@ function Hero() {
             {/* Content */}
             <div className="md:w-[640px]">
               {/* Copy */}
-              <h1 className="h1 font-cabinet-grotesk mb-6" data-aos="fade-right" data-aos-delay="100">
-                The platform for creative{' '}
+              <h1 className="h1 font-cabinet-grotesk mb-6 dark:text-slate-100" data-aos="fade-right" data-aos-delay="100">
+                Suivez simplement votre projet de{' '}
                 <span className="relative inline-flex text-blue-500">
                   <svg
                     className="absolute left-0 top-full -mt-4 max-w-full -z-10"
@@ -31,7 +31,7 @@ function Hero() {
                       fillRule="evenodd"
                     />
                   </svg>
-                  minds
+                  rénovation
                 </span>
                 .
               </h1>
@@ -46,20 +46,20 @@ function Hero() {
               >
                 <div>
                   <Link className="btn text-white bg-blue-500 hover:bg-blue-600 w-full shadow-sm" to="/signup">
-                    Join The Community
+                    Créer son premier projet
                   </Link>
                 </div>
                 <div>
                   <Link className="btn text-gray-600 bg-white hover:bg-blue-100 hover:text-blue-600 w-full shadow-sm" to="/signin">
-                    Sign In
+                    En savoir plus
                   </Link>
                 </div>
               </div>
               {/* Stats */}
               <div className="inline-flex items-center space-x-4 md:space-x-6" data-aos="fade-right" data-aos-delay="400">
                 <div>
-                  <div className="font-cabinet-grotesk text-2xl font-extrabold">27M</div>
-                  <div className="text-gray-500">Inspiration</div>
+                  <div className="font-cabinet-grotesk text-2xl font-extrabold">2 562</div>
+                  <div className="text-gray-500">propriétaires</div>
                 </div>
                 <svg className="fill-gray-300" width="14" height="10" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -68,8 +68,8 @@ function Hero() {
                   />
                 </svg>
                 <div>
-                  <div className="font-cabinet-grotesk text-2xl font-extrabold">44K</div>
-                  <div className="text-gray-500">Collections</div>
+                  <div className="font-cabinet-grotesk text-2xl font-extrabold">1 230</div>
+                  <div className="text-gray-500">artisans</div>
                 </div>
                 <svg className="fill-gray-300" width="14" height="10" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -78,8 +78,8 @@ function Hero() {
                   />
                 </svg>
                 <div>
-                  <div className="font-cabinet-grotesk text-2xl font-extrabold">2M+</div>
-                  <div className="text-gray-500">Creatives</div>
+                  <div className="font-cabinet-grotesk text-2xl font-extrabold">3 352</div>
+                  <div className="text-gray-500">projets</div>
                 </div>
               </div>
             </div>

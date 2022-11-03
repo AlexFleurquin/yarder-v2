@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import SearchModal from '../components/ModalSearch';
 import Notifications from '../components/DropdownNotifications';
 import Help from '../components/DropdownHelp';
 import UserMenu from '../components/DropdownProfile';
+import Logo from './../utils/Logo';
+import DarkMode from './../utils/DarkMode';
 
 function Header({
   sidebarOpen,
@@ -13,32 +16,47 @@ function Header({
   const [searchModalOpen, setSearchModalOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 bg-white border-b border-slate-200 z-30">
+    <header className="top-0 z-30">
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 -mb-px">
 
           {/* Header: Left side */}
           <div className="flex">
-
-            {/* Hamburger button */}
-            <button
-              className="text-slate-500 hover:text-slate-600 lg:hidden"
-              aria-controls="sidebar"
-              aria-expanded={sidebarOpen}
-              onClick={(e) => { e.stopPropagation(); setSidebarOpen(!sidebarOpen); }}
-            >
-              <span className="sr-only">Open sidebar</span>
-              <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <rect x="4" y="5" width="16" height="2" />
-                <rect x="4" y="11" width="16" height="2" />
-                <rect x="4" y="17" width="16" height="2" />
-              </svg>
-            </button>
-
+            <Logo />
           </div>
-
+          {/* Desktop navigation */}
+          <nav className="flex">
+            {/* Desktop sign in links */}
+            <ul className="flex flex-wrap items-center">
+              <li>
+                <Link
+                  className="font-medium text-gray-600 decoration-blue-500 decoration-2 underline-offset-2 hover:underline px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                  to="/dashboard"
+                >
+                  Tableau de bord
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="font-medium text-gray-600 decoration-blue-500 decoration-2 underline-offset-2 hover:underline px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                  to="/signin"
+                >
+                  Projets
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="font-medium text-gray-600 decoration-blue-500 decoration-2 underline-offset-2 hover:underline px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                  to="/inbox"
+                >
+                  Messages
+                </Link>
+              </li>
+            </ul>
+          </nav>
           {/* Header: Right side */}
           <div className="flex items-center space-x-3">
+            <DarkMode />
             <div>
               <button
                 className={`w-8 h-8 flex items-center justify-center bg-slate-100 hover:bg-slate-200 transition duration-150 rounded-full ml-3 ${searchModalOpen && 'bg-slate-200'}`}
@@ -58,6 +76,7 @@ function Header({
             {/*  Divider */}
             <hr className="w-px h-6 bg-slate-200 mx-3" />
             <UserMenu align="right" />
+
 
           </div>
 

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-import Sidebar from '../partials/Sidebar';
 import Header from '../partials/Header';
 import WelcomeBanner from '../partials/dashboard/WelcomeBanner';
 import DashboardAvatars from '../partials/dashboard/DashboardAvatars';
@@ -20,19 +19,14 @@ import DashboardCard11 from '../partials/dashboard/DashboardCard11';
 
 function Dashboard() {
 
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
   return (
-    <div className="flex h-screen overflow-hidden">
-
-      {/* Sidebar */}
-      <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+    <div className="flex h-screen overflow-hidden dark:bg-slate-900">
 
       {/* Content area */}
       <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
 
         {/*  Site header */}
-        <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+        <Header />
 
         <main>
           <div className="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
@@ -58,7 +52,7 @@ function Dashboard() {
                     <path d="M15 7H9V1c0-.6-.4-1-1-1S7 .4 7 1v6H1c-.6 0-1 .4-1 1s.4 1 1 1h6v6c0 .6.4 1 1 1s1-.4 1-1V9h6c.6 0 1-.4 1-1s-.4-1-1-1z" />
                   </svg>
                   <span className="hidden xs:block ml-2">Add View</span>
-                </button>                
+                </button>
               </div>
 
             </div>
@@ -88,7 +82,7 @@ function Dashboard() {
               <DashboardCard10 />
               {/* Card (Income/Expenses) */}
               <DashboardCard11 />
-              
+
             </div>
 
           </div>

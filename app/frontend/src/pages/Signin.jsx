@@ -57,7 +57,7 @@ function Signin() {
                   <div className="mr-1">
                     <Link className="text-sm underline hover:no-underline" to="/reset-password">Forgot Password?</Link>
                   </div>
-                  <Link className="btn bg-indigo-500 hover:bg-indigo-600 text-white ml-3" to="/">Sign In</Link>
+                  <Link className="btn bg-indigo-500 hover:bg-indigo-600 text-white ml-3" to="/dashboard">Sign In</Link>
                 </div>
               </form>
               {/* Footer */}
