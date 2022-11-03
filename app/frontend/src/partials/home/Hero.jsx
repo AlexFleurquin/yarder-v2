@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ButtonPrimary from '../../components/ButtonPrimary';
 
 import HeroImage from '../../images/hero-image.png';
 
@@ -17,9 +18,9 @@ function Hero() {
               {/* Copy */}
               <h1 className="h1 font-cabinet-grotesk mb-6 dark:text-slate-100" data-aos="fade-right" data-aos-delay="100">
                 Suivez simplement vos projets de{' '}
-                <span className="relative inline-flex text-blue-500">
+                <span className="relative inline-flex bg-gradient-to-r from-rose-400 to-orange-200 bg-clip-text text-transparent">
                   <svg
-                    className="absolute left-0 top-full -mt-4 max-w-full -z-10"
+                    className="absolute left-0 top-full -mt-2 max-w-full -z-10"
                     width="220"
                     height="24"
                     viewBox="0 0 220 24"
@@ -44,11 +45,9 @@ function Hero() {
                 data-aos="fade-right"
                 data-aos-delay="300"
               >
-                <div>
-                  <Link className="btn text-white bg-blue-500 hover:bg-blue-600 w-full shadow-sm" to="/signup">
-                    Créer son premier projet
-                  </Link>
-                </div>
+                <ButtonPrimary>
+                  Créer son premier projet
+                </ButtonPrimary>
                 <div>
                   <Link className="btn text-gray-600 bg-white hover:bg-blue-100 hover:text-blue-600 w-full shadow-sm" to="/signin">
                     En savoir plus

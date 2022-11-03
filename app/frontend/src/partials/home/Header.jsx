@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ButtonPrimary from '../../components/ButtonPrimary';
 import DarkMode from '../../utils/DarkMode';
 import Logo from '../../utils/Logo';
 
@@ -21,16 +22,16 @@ function Header() {
             <ul className="flex grow justify-end flex-wrap items-center">
               <li>
                 <Link
-                  className="font-medium text-gray-600 decoration-blue-500 decoration-2 underline-offset-2 hover:underline px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                  className="font-medium text-gray-600 decoration-blue-500 decoration-2 underline-offset-2 hover:text-gray-800 dark:hover:text-gray-100 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
                   to="/signin"
                 >
                   Se connecter
                 </Link>
               </li>
               <li className="ml-3">
-                <Link className="btn-sm text-white bg-blue-500 hover:bg-blue-600 w-full shadow-sm" to="/signup">
+                <ButtonPrimary>
                   Créer son premier projet
-                </Link>
+                </ButtonPrimary>
               </li>
               <li className="text-gray-600 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out">
                 <DarkMode />
