@@ -7,7 +7,7 @@ function Hero() {
   return (
     <section className="relative">
       {/* Bg */}
-      <div className="absolute inset-0 rounded-bl-[100px] bg-gray-50 dark:bg-slate-900 pointer-events-none -z-10" aria-hidden="true" />
+      <div className="absolute inset-0 bg-gray-50 dark:bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black pointer-events-none -z-10" aria-hidden="true" />
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="pt-32 pb-12 md:pt-40 md:pb-20">
           {/* Hero content */}
@@ -16,7 +16,7 @@ function Hero() {
             <div className="md:w-[640px]">
               {/* Copy */}
               <h1 className="h1 font-cabinet-grotesk mb-6 dark:text-slate-100" data-aos="fade-right" data-aos-delay="100">
-                Suivez simplement votre projet de{' '}
+                Suivez simplement vos projets de{' '}
                 <span className="relative inline-flex text-blue-500">
                   <svg
                     className="absolute left-0 top-full -mt-4 max-w-full -z-10"
@@ -36,7 +36,7 @@ function Hero() {
                 .
               </h1>
               <p className="text-xl text-gray-500 mb-10" data-aos="fade-right" data-aos-delay="200">
-                Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.
+                Coordonnez facilement votre équipe. Planifiez vous-même les interventions. Gardez le contrôle. Toujours un oeil sur votre budget.
               </p>
               {/* Buttons */}
               <div
@@ -58,7 +58,7 @@ function Hero() {
               {/* Stats */}
               <div className="inline-flex items-center space-x-4 md:space-x-6" data-aos="fade-right" data-aos-delay="400">
                 <div>
-                  <div className="font-cabinet-grotesk text-2xl font-extrabold">2 562</div>
+                  <div className="font-cabinet-grotesk text-2xl font-extrabold dark:text-slate-100">2 562</div>
                   <div className="text-gray-500">propriétaires</div>
                 </div>
                 <svg className="fill-gray-300" width="14" height="10" xmlns="http://www.w3.org/2000/svg">
@@ -68,7 +68,7 @@ function Hero() {
                   />
                 </svg>
                 <div>
-                  <div className="font-cabinet-grotesk text-2xl font-extrabold">1 230</div>
+                  <div className="font-cabinet-grotesk text-2xl font-extrabold dark:text-slate-100">1 230</div>
                   <div className="text-gray-500">artisans</div>
                 </div>
                 <svg className="fill-gray-300" width="14" height="10" xmlns="http://www.w3.org/2000/svg">
@@ -78,7 +78,7 @@ function Hero() {
                   />
                 </svg>
                 <div>
-                  <div className="font-cabinet-grotesk text-2xl font-extrabold">3 352</div>
+                  <div className="font-cabinet-grotesk text-2xl font-extrabold dark:text-slate-100">3 352</div>
                   <div className="text-gray-500">projets</div>
                 </div>
               </div>

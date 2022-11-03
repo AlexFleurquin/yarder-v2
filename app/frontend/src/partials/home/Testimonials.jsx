@@ -24,7 +24,7 @@ function Testimonials() {
   }, []);
 
   return (
-    <section>
+    <section className='dark:bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black'>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="pb-8">
           <div className="relative">

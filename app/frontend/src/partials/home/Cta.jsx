@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Cta() {
   return (
-    <section>
+    <section className='dark:bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black'>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="py-8">
           {/* CTA box */}
