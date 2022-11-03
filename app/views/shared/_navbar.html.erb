@@ -1,0 +1,22 @@
+<nav class="px-8 py-4 z-30 flex flex-wrap px-5 items-center bg-transparent shadow-sm w-full absolute">
+  <div class="text-center text-xl font-semibold mb-0">
+    <%= Rails.application.class.module_parent_name %>
+  </div>
+  <ul class="ml-auto flex space-x-4">
+    <li>
+      <%= link_to "Accueil",
+                  root_path,
+                  class: "text-slate-200 hover:text-slate-200 #{current_page?(root_path) ? 'text-slate-200' : nil }"
+      %>
+    </li>
+    <li>
+      <a href="#" class="text-slate-400 hover:text-slate-200">Se connecter</a>
+    </li>
+    <li>
+      <a href="#" class="text-slate-400 hover:text-slate-200 font-medium">Réserver un test</a>
+    </li>
+    <li>
+      <a href="#" class="text-slate-400 hover:text-slate-200 font-medium">S'abonner</a>
+    </li>
+  </ul>
+</nav>
