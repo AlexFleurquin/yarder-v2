@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import ButtonPrimary from '../../components/ButtonPrimary';
-import DarkMode from '../../utils/DarkMode';
-import Logo from '../../utils/Logo';
+import React from "react";
+import { Link } from "react-router-dom";
+import ButtonPrimary from "../../components/ButtonPrimary";
+import DarkMode from "../../utils/DarkMode";
+import Logo from "../../utils/Logo";
 
 function Header() {
   return (
@@ -12,7 +12,7 @@ function Header() {
           {/* Site branding */}
           <div className="shrink-0 mr-4">
             {/* Logo */}
-            <Link className="block group" to="/" aria-label="Cruip">
+            <Link className="block group" to="/" aria-label="Logo">
               <Logo />
             </Link>
           </div>
@@ -29,9 +29,7 @@ function Header() {
                 </Link>
               </li>
               <li className="ml-3">
-                <ButtonPrimary>
-                  Créer son premier projet
-                </ButtonPrimary>
+                <ButtonPrimary>Créer son premier projet</ButtonPrimary>
               </li>
               <li className="text-gray-600 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out">
                 <DarkMode />
