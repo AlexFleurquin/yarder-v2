@@ -1,52 +1,69 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 function DarkMode() {
-
-  const [dark, setDark] = useState(false);
+  // Handle light modes
+  const [darkMode, setDarkMode] = useState(() => {
+    const dark = localStorage.getItem("dark-mode");
+    if (dark === null) {
+      return false;
+    } else {
+      return dark === "true";
+    }
+  });
 
   useEffect(() => {
-      const root = window.document.documentElement;
-      if (dark) {
-        return root.classList.add("dark");
-      }
-      root.classList.remove("dark");
-  }, [dark]);
+    localStorage.setItem("dark-mode", darkMode);
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
 
   return (
-    <button onClick={() => setDark(!dark)} >
-      {dark ? (
+    <div className="flex flex-col justify-center ml-3">
+      <input
+        type="checkbox"
+        name="light-switch"
+        id="light-switch"
+        className="light-switch sr-only"
+        checked={darkMode}
+        onChange={() => setDarkMode(!darkMode)}
+      />
+      <label className="relative cursor-pointer p-2" htmlFor="light-switch">
         <svg
-          className="w-6 h-6 hover:text-white"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
+          className="dark:hidden"
+          width="16"
+          height="16"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-          ></path>
+            className="fill-gray-400"
+            d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z"
+          />
+          <path
+            className="fill-gray-500"
+            d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z"
+          />
         </svg>
-      ) : (
         <svg
-          className="w-6 h-6 hover:text-gray-900"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
+          className="hidden dark:block"
+          width="16"
+          height="16"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-          ></path>
+            className="fill-gray-500"
+            d="M6.2 1C3.2 1.8 1 4.6 1 7.9 1 11.8 4.2 15 8.1 15c3.3 0 6-2.2 6.9-5.2C9.7 11.2 4.8 6.3 6.2 1Z"
+          />
+          <path
+            className="fill-gray-500"
+            d="M12.5 5a.625.625 0 0 1-.625-.625 1.252 1.252 0 0 0-1.25-1.25.625.625 0 1 1 0-1.25 1.252 1.252 0 0 0 1.25-1.25.625.625 0 1 1 1.25 0c.001.69.56 1.249 1.25 1.25a.625.625 0 1 1 0 1.25c-.69.001-1.249.56-1.25 1.25A.625.625 0 0 1 12.5 5Z"
+          />
         </svg>
-      )}
-    </button>
-
+        <span className="sr-only">Switch to light / dark version</span>
+      </label>
+    </div>
   );
 }
 
